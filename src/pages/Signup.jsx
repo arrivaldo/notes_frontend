@@ -18,7 +18,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://notes-server-murex.vercel.app/api/auth/register",
+        "http://localhost:5000/api/auth/register",
         { name, email, password }
       );
       console.log(response);
