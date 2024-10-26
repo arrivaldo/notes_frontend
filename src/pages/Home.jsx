@@ -29,7 +29,7 @@ const Home = () => {
 
   const fetchNotes = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/note", {
+      const { data } = await axios.get("https://notes-server-murex.vercel.app/api/note", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
       }
@@ -52,7 +52,7 @@ const Home = () => {
   const addNote = async (title, description) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/note/add",
+        "https://notes-server-murex.vercel.app/api/note/add",
         { title, description }, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -73,7 +73,7 @@ const Home = () => {
   const deleteNote = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/note/${id}`,
+        `https://notes-server-murex.vercel.app/api/note/${id}`,
          {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -96,7 +96,7 @@ const Home = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/note/${id}`,
+        `https://notes-server-murex.vercel.app/api/note/${id}`,
         { title, description }, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`
