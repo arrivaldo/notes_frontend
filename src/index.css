@@ -3,3 +3,35 @@
 @tailwind utilities;
 
 
+:root {
+    --sky-300: #7dd3fc;
+    --pink-300: #f9a8d4;
+    --green-300: #6ee7b7;
+    --yellow-300: #facc15;
+    --red-300: #f87171;
+    --purple-300: #c084fc;
+    --blue-300: #60a5fa;
+    --indigo-300: #818cf8;
+    --violet-300: #a78bfa;
+  }
+  
+
+
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(270deg, #4f46e5, #6366f1, #a78bfa, #d9d9f3, #6366f1);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  

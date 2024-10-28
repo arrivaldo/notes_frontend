@@ -1,14 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
 import { useAuth } from "../context/ContextProvider";
 
-const Navbar2 = ({setQuery}) => {
-  const { user } = useAuth();
+const Navbar = ({ setQuery }) => {
+  const { user, logout } = useAuth();
+  const navigate = useNavigate(); // Get the navigate function
+
+  const handleLogout = () => {
+    logout(); // Call the logout function from context
+    navigate('/'); // Redirect to the home page
+  };
 
   return (
-    <nav className="bg-gray-800 p-4 text-white flex justify-between items-center">
+    <nav className="bg-[#1f293714] p-4 text-white flex justify-between items-center z-30 fixed w-full">
       <div className="text-xl font-bold">
-        <Link to="/">NoteApp</Link>
+        <Link to="/">Notes.io</Link>
       </div>
       {/* <input
         type="text"
@@ -29,10 +35,8 @@ const Navbar2 = ({setQuery}) => {
         ) : (
           <>
             <span className="mr-4">{user.name}</span>
-
             <button
-              // onClick={handleLogout}
-
+              onClick={handleLogout} // Update the onClick handler
               className="bg-red-500 px-4 py-2 rounded"
             >
               Logout
@@ -44,4 +48,4 @@ const Navbar2 = ({setQuery}) => {
   );
 };
 
-export default Navbar2;
+export default Navbar;

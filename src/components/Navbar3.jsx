@@ -16,12 +16,12 @@ const Navbar = ({ setQuery }) => {
       <div className="text-xl font-bold">
         <Link to="/">Notes.io</Link>
       </div>
-      <input
+      {/* <input
         type="text"
         placeholder="Search notes..."
         className="bg-gray-600 px-4 py-2 rounded"
         onChange={(e) => setQuery(e.target.value)}
-      />
+      /> */}
       <div>
         {!user ? (
           <>

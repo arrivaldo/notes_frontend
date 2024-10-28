@@ -61,8 +61,9 @@ const Home = () => {
       );
       if (response.data.success) {
         fetchNotes();
-        navigate('/');
+        navigate('/home');
         closeModal();
+        toast.success("Note added!")
       }
     } catch (error) {
       console.log(error);
@@ -81,10 +82,10 @@ const Home = () => {
         }
       );
       if (response.data.success) {
-        toast.success("note deleted")
+        toast.success("Note deleted!")
 
         fetchNotes();
-        navigate('/');
+        navigate('/home');
       }
     } catch (error) {
       console.log(error);
@@ -105,8 +106,9 @@ const Home = () => {
       );
       if (response.data.success) {
         fetchNotes();
-        navigate('/');
+        navigate('/home');
         closeModal();
+        toast.success("Note edited!")
       }
     } catch (error) {
       console.log(error);

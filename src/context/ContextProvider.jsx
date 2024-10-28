@@ -28,7 +28,7 @@ const ContextProvider = ({children}) => {
                          setUser(null)
                      }
                  } catch(error) {
-                     console.log(error)
+                     console.log("No authorized")
                  }
          }
          verifyUser()
