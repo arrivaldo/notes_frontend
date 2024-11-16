@@ -17,7 +17,7 @@ const ContextProvider = ({children}) => {
 
          const verifyUser = async () => {
                  try {
-                     const res = await axios.get('https://notes-server-v78m.onrender.com/api/auth/verify', {
+                     const res = await axios.get('notesserver-production-564d.up.railway.app/api/auth/verify', {
                          headers: {
                              Authorization: `Bearer ${localStorage.getItem("token")}`,
                          }

@@ -17,7 +17,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://notes-server-v78m.onrender.com/api/auth/register",
+        "https://notesserver-production-564d.up.railway.app/api/auth/register",
         { name, email, password }
       );
       console.log(response);

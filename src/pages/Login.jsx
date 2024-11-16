@@ -19,7 +19,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://notes-server-v78m.onrender.com/api/auth/login",
+        "https://notesserver-production-564d.up.railway.app/api/auth/login",
         { email, password }
       );
       if (response.data.success) {

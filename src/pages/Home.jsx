@@ -29,7 +29,7 @@ const Home = () => {
 
   const fetchNotes = async () => {
     try {
-      const { data } = await axios.get("https://notes-server-v78m.onrender.com/api/note", {
+      const { data } = await axios.get("https://notesserver-production-564d.up.railway.app/api/note", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
       }
@@ -52,7 +52,7 @@ const Home = () => {
   const addNote = async (title, description) => {
     try {
       const response = await axios.post(
-        "https://notes-server-v78m.onrender.com/api/note/add",
+        "https://notesserver-production-564d.up.railway.app/api/note/add",
         { title, description }, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -74,7 +74,7 @@ const Home = () => {
   const deleteNote = async (id) => {
     try {
       const response = await axios.delete(
-        `https://notes-server-v78m.onrender.com/api/note/${id}`,
+        `https://notesserver-production-564d.up.railway.app/api/note/${id}`,
          {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -97,7 +97,7 @@ const Home = () => {
 
     try {
       const response = await axios.put(
-        `https://notes-server-v78m.onrender.com/api/note/${id}`,
+        `https://notesserver-production-564d.up.railway.app/api/note/${id}`,
         { title, description }, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`
